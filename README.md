@@ -23,7 +23,7 @@ The live rehearsal, with placeholder art, on Robinhood Chain testnet (chain id 4
 | `NightfallRenderer` | [`0x671e26a2bea5b8c494865ac7e3c0bc02220342c7`](https://explorer.testnet.chain.robinhood.com/address/0x671e26a2bea5b8c494865ac7e3c0bc02220342c7) |
 | `CosmeticVoucherAuthority` | [`0x01c298A3001F061d9a70e882DFCC11DB6153253B`](https://explorer.testnet.chain.robinhood.com/address/0x01c298A3001F061d9a70e882DFCC11DB6153253B) |
 
-`deploy/testnet.json` is the config that deploy ran from. Mainnet (chain id 4663) is not deployed.
+`deploy/testnet.json` is the config that deploy ran from, with one change: its `artFile` entry is a note in place of the path, since the Genesis art export is supplied separately and is not in this repository (the tests use the fixture art instead). Mainnet (chain id 4663) is not deployed.
 
 ## What is where
 
