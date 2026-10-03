@@ -1,0 +1,35 @@
+# Nightfall City contracts. Foundry project; the game lives one folder up.
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+script = "script"
+# SeaDrop pins 0.8.17 exactly, so everything here compiles with it.
+solc_version = "0.8.17"
+optimizer = true
+optimizer_runs = 200
+# The report and full-check scripts render 555 tokens in one simulation.
+gas_limit = "18446744073709551615"
+memory_limit = 268435456
+bytecode_hash = "none"
+fs_permissions = [{ access = "read", path = "./deploy" }, { access = "read-write", path = "./reports" }]
+remappings = [
+    "seadrop/=lib/seadrop/src/",
+    "ERC721A/=lib/ERC721A/contracts/",
+    "solmate/=lib/solmate/src/",
+    "utility-contracts/=lib/utility-contracts/src/",
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+    "forge-std/=lib/forge-std/src/",
+    "sstore2/=lib/sstore2/contracts/",
+]
+
+[fuzz]
+runs = 512
+
+[profile.ci.fuzz]
+runs = 4096
+
+[rpc_endpoints]
+robinhood_testnet = "https://rpc.testnet.chain.robinhood.com"
+robinhood_mainnet = "https://rpc.mainnet.chain.robinhood.com"
