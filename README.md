@@ -4,7 +4,7 @@
 
 Nightfall City is a pixel-art crime game on Robinhood Chain. Players hold Genesis bosses and Operators, send them on Expeditions and Missions across the city, and come back with credits, items, Heat and, now and then, a real-world reward paid in tokenised stock. Play it at [play.nightfallcity.com](https://play.nightfallcity.com).
 
-This repository is the on-chain side: the Genesis collection contract, the renderer that draws every token from layers stored on chain, the authority that lets a holder upgrade a token's look with a signed voucher, and the tools that check the art and run the deploy. The game server is a separate codebase; everything it needs from the chain is here.
+This repository is the on-chain side: the Genesis collection contract, the renderer that draws every token from layers stored on chain, the authority that lets a holder upgrade a token's look with a signed voucher, and the tools that check the art and run the deploy. The game server is a separate codebase; everything it needs from the chain is here. Nightfall City will never release a token: the only contracts are the characters and their art.
 
 ## How the contracts fit the game
 
@@ -15,7 +15,7 @@ This repository is the on-chain side: the Genesis collection contract, the rende
 
 ## On Robinhood Chain testnet
 
-The live rehearsal, with placeholder art, on Robinhood Chain testnet (chain id 46630, RPC `https://rpc.testnet.chain.robinhood.com`):
+The live rehearsal on Robinhood Chain testnet (chain id 46630, RPC `https://rpc.testnet.chain.robinhood.com`), deployed with the real Genesis art export, so the art the contract serves after the reveal is the collection's own:
 
 | Contract | Address |
 |---|---|
